@@ -1,8 +1,8 @@
-from flask import render_template,url_for,flash,redirect
+from flask import render_template,url_for,flash,redirect,request
 from pitchapp import app, db, bcrypt
 from pitchapp.forms import RegistrationForm, LoginForm
 from pitchapp.models import User, Post
-from flask_login import login_user, current_user, logout_user
+from flask_login import login_user, current_user, logout_user, login_required
 
 
 
@@ -56,8 +56,9 @@ def login():
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             
             login_user(user, remember=form.remember.data)
+            next_page = request.args.get('next')
             # flash('You have logged in', 'alert alert-success')
-            return redirect(url_for('home'))
+            return redirect(next_page)if next_page else redirect(url_for('home'))
             
             
         # if form.email.data == 'wayne@pitch.com' and form.password.data == '123456789':
@@ -71,3 +72,10 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('home'))
+
+
+@app.route('/account')
+@login_required
+def account():
+    return render_template('account.html', title='Account')
+    
