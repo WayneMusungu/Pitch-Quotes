@@ -37,13 +37,20 @@ def about():
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
-        flash(f'Account created for {form.username.data}!', 'success')
+        flash(f'Account created for {form.username.data}!', 'alert alert-success')
         return redirect(url_for('home'))
     return render_template('register.html', title='Register', form=form)
 
-@app.route("/login")
+@app.route("/login", methods=['GET','POST'])
 def login():
     form = LoginForm()
+    if form.validate_on_submit():
+        if form.email.data == 'wayne@pitch.com' and form.password.data == '123456789':
+            flash('You have been logged in', 'alert alert-success')
+            return redirect(url_for('home'))
+        else:
+            flash('Login Unsuccessful! Please check your login credentials', 'alert alert-danger')
+    
     return render_template('login.html', title='Login', form=form)
 
 if __name__ == '__main__':
