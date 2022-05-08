@@ -1,3 +1,4 @@
+from fileinput import filename
 from flask import render_template,url_for,flash,redirect,request
 from pitchapp import app, db, bcrypt
 from pitchapp.forms import RegistrationForm, LoginForm
@@ -77,6 +78,7 @@ def logout():
 @app.route('/account')
 @login_required
 def account():
+    image_file = url_for('static', filename='profile_picture/' + current_user.image_file)
     
-    return render_template('account.html', title='Account')
+    return render_template('account.html', title='Account', image_file=image_file)  
     
