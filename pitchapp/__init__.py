@@ -14,9 +14,17 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
-login_manager.login_view = 'login'
+login_manager.login_view = 'users.login'
 login_manager.login_message_category = 'alert alert-info'
 
 
 
-from pitchapp import routes
+# from pitchapp import routes
+from pitchapp.users.routes import users
+from pitchapp.posts.routes import posts
+from pitchapp.main.routes import main
+
+
+app.register_blueprint(users)
+app.register_blueprint(posts)
+app.register_blueprint(main)
