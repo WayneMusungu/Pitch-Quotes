@@ -31,8 +31,6 @@ $ source virtual/bin/activate
 2. HTML5
 3. Bootstrap5
 
-#### **Contact**
->Wayne Musungu
 
 
 ## License
