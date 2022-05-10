@@ -5,7 +5,7 @@
 
 #### **Description**
 About
-This is a flask application that allows users to post one minute pitches once logged in. It also allows the user to post more than one pitch
+This is a flask application that allows users to post one-minute pitches once logged in. It also allows the user to post more than one pitch
 
 #### Getting Started
 - Clone this repo and ```cd``` into the folder
@@ -19,10 +19,12 @@ $ source virtual/bin/activate
 
 #### **User Story BDD**
 - As a user, I would like to see the pitches other people have posted.
-- As a user, I would like to be signed in for me to leave a comment
+- As a user, I would like to be signed in and be able to log out.
 - As a user, I would like to receive a welcoming email once I sign up.
-- As a user, I would like to view the pitches I have created in my profile page.
 - As a user, I would like to submit a pitch.
+- As a user, I would like to view the pitches I have created.
+- As a user, I would like to update an already existing pitch.
+
 
 #### **Technologies used**
 1. Flask
