@@ -24,6 +24,7 @@ $ source virtual/bin/activate
 - As a user, I would like to submit a pitch.
 - As a user, I would like to view the pitches I have created.
 - As a user, I would like to update an already existing pitch.
+- As a user, I would like to delete an already existing pitch.
 
 
 #### **Technologies used**
