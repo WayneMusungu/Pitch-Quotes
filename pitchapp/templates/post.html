@@ -13,6 +13,7 @@
             {% if post.author == current_user %}
             <div>
                 <a class="btn btn-primary m-1" href="{{ url_for('posts.update_post',post_id = post.id) }}">Update</a>
+                <a class="btn btn-danger m-1" href="{{ url_for('posts.delete_post',post_id = post.id) }}">Delete</a>
                 
             </div>
             {% endif %}
