@@ -10,7 +10,7 @@ This is a flask application that allows users to post one-minute pitches once lo
 #### Home Page
 The homepage contains links to about section, login section and register section.
 The homepage also contains posts made by users.
-![LANDING PAGE](loginpage.png)
+![LANDING PAGE](homepage.png)
 
 #### About Page
 The about section contains a viseo that keeps the users entertained.
