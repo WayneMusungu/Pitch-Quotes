@@ -13,7 +13,7 @@ The homepage also contains posts made by users.
 ![LANDING PAGE](homepage.png)
 
 #### About Page
-The about section contains a viseo that keeps the users entertained.
+The about section contains a video that keeps the users entertained.
 ![LANDING PAGE](about.png)
 
 #### Register Page
