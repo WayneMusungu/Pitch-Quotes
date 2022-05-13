@@ -4,9 +4,9 @@ import secrets
 from turtle import title
 from PIL import Image
 from flask import render_template,url_for,flash,redirect,request, abort
-from pitchapp import app, db, bcrypt
-from pitchapp.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm
-from pitchapp.models import User, Post
+from app import app, db, bcrypt
+from app.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm
+from app.models import User, Post
 from flask_login import login_user, current_user, logout_user, login_required
 
 

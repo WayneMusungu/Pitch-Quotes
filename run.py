@@ -1,4 +1,4 @@
-from pitchapp import app
+from app import app
 
 
 

@@ -20,9 +20,9 @@ login_manager.login_message_category = 'alert alert-info'
 
 
 # from pitchapp import routes
-from pitchapp.users.routes import users
-from pitchapp.posts.routes import posts
-from pitchapp.main.routes import main
+from app.users.routes import users
+from app.posts.routes import posts
+from app.main.routes import main
 
 
 app.register_blueprint(users)

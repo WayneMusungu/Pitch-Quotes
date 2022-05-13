@@ -1,9 +1,9 @@
 from flask import render_template, url_for, flash, redirect, request, Blueprint
 from flask_login import login_user, current_user, logout_user, login_required
-from pitchapp import db, bcrypt
-from pitchapp.models import User, Post
-from pitchapp.users.forms import (RegistrationForm, LoginForm, UpdateAccountForm,)
-from pitchapp.users.utils import save_picture
+from app import db, bcrypt
+from app.models import User, Post
+from app.users.forms import (RegistrationForm, LoginForm, UpdateAccountForm,)
+from app.users.utils import save_picture
 
 users = Blueprint('users', __name__)
 
