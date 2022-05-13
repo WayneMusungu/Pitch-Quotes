@@ -7,6 +7,26 @@
 About
 This is a flask application that allows users to post one-minute pitches once logged in. It also allows the user to post more than one pitch
 
+#### Home Page
+The homepage contains links to about section, login section and register section.
+The homepage also contains posts made by users.
+![LANDING PAGE](loginpage.png)
+
+#### About Page
+The about section contains a viseo that keeps the users entertained.
+![LANDING PAGE](about.png)
+
+#### Register Page
+The register page enables new users to make create an account by providing the credetials required to be able to access the application.
+![LANDING PAGE](register.png)
+
+
+#### Login Page
+Upon successfull registration a user will be redirected to the login page, with a flash meassage informing them that their account has been created and they can login.
+![LANDING PAGE](loginpage.png)
+
+
+
 #### Getting Started
 - Clone this repo and ```cd``` into the folder
 ```sh 
